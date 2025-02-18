@@ -1,0 +1,26 @@
+TESTNAME: router_header_addr_00_test SEED: 3792228570 # UVM_ERROR :    0
+
+TESTNAME: router_header_addr_01_test SEED: 4232640106 # UVM_ERROR :    0
+
+TESTNAME: router_header_addr_10_test SEED: 2640894490 # UVM_ERROR :    0
+
+TESTNAME: router_min_header_len_test SEED: 3194525726 # UVM_ERROR :    0
+
+TESTNAME: router_mid_header_len_test SEED: 2378756270 # UVM_ERROR :    0
+
+TESTNAME: router_max_header_len_test SEED: 3605572462 # UVM_ERROR :    0
+
+TESTNAME: router_min_payload_data_test SEED: 2800258090 # UVM_ERROR :    0
+
+TESTNAME: router_mid_payload_data_test SEED: 3869804822 # UVM_ERROR :    0
+
+TESTNAME: router_max_payload_data_test SEED: 2563303286 # UVM_ERROR :    0
+
+TESTNAME: router_mid_reset_test SEED: 3427304538 # UVM_ERROR :    0
+
+TESTNAME: router_soft_reset_0_test SEED: 3592980118 # UVM_ERROR :    0
+
+TESTNAME: router_soft_reset_1_test SEED: 3597194254 # UVM_ERROR :    0
+
+TESTNAME: router_soft_reset_2_test SEED: 3905460894 # UVM_ERROR :    0
+
