@@ -141,7 +141,7 @@ module router_top();
     
     //Checker for resetn signal
     property reset_check;
-        @(posedge inf.clk) $fell(inf.resetn) |=> (inf.data_out_0 == 0 && inf.data_out_1 == 0 && inf.data_out_2 == 0);
+        @(posedge inf.clk) $fell(inf.resetn) |=> $isunknown(inf.data_out_0) && $isunknown(inf.data_out_1) && $isunknown(inf.data_out_2);
     endproperty : reset_check
 
     assert property (reset_check);

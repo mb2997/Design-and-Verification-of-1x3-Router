@@ -58,7 +58,7 @@ module fifo   (clk,
     begin
         if(!resetn)
         begin
-            data_out <= 0;
+            data_out <= 'hz;
         end
         else if(soft_reset)
         begin

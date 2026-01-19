@@ -27,33 +27,39 @@ run_tc3 :
 	vsim -vopt $(TBModule) -sv_seed random -c -do "run -all; exit" +UVM_TESTNAME=router_header_addr_10_test +UVM_VERBOSITY=$(VERBOSITY)
 
 run_tc4 :
-	vsim -vopt $(TBModule) -sv_seed 3949019678 -c -do "run -all; exit" +UVM_TESTNAME=router_min_header_len_test +UVM_VERBOSITY=$(VERBOSITY)
+	vsim -vopt $(TBModule) -sv_seed random -c -do "run -all; exit" +UVM_TESTNAME=router_header_addr_11_test +UVM_VERBOSITY=$(VERBOSITY)
 
 run_tc5 :
-	vsim -vopt $(TBModule) -sv_seed random -c -do "run -all; exit" +UVM_TESTNAME=router_mid_header_len_test +UVM_VERBOSITY=$(VERBOSITY)
+	vsim -vopt $(TBModule) -sv_seed random -c -do "run -all; exit" +UVM_TESTNAME=router_header_len_0_test +UVM_VERBOSITY=$(VERBOSITY)
 
 run_tc6 :
-	vsim -vopt $(TBModule) -sv_seed random -c -do "run -all; exit" +UVM_TESTNAME=router_max_header_len_test +UVM_VERBOSITY=$(VERBOSITY)
+	vsim -vopt $(TBModule) -sv_seed 3949019678 -c -do "run -all; exit" +UVM_TESTNAME=router_min_header_len_test +UVM_VERBOSITY=$(VERBOSITY)
 
 run_tc7 :
-	vsim -vopt $(TBModule) -sv_seed random -c -do "run -all; exit" +UVM_TESTNAME=router_min_payload_data_test +UVM_VERBOSITY=$(VERBOSITY)
+	vsim -vopt $(TBModule) -sv_seed random -c -do "run -all; exit" +UVM_TESTNAME=router_mid_header_len_test +UVM_VERBOSITY=$(VERBOSITY)
 
 run_tc8 :
-	vsim -vopt $(TBModule) -sv_seed random -c -do "run -all; exit" +UVM_TESTNAME=router_mid_payload_data_test +UVM_VERBOSITY=$(VERBOSITY)
+	vsim -vopt $(TBModule) -sv_seed random -c -do "run -all; exit" +UVM_TESTNAME=router_max_header_len_test +UVM_VERBOSITY=$(VERBOSITY)
 
 run_tc9 :
-	vsim -vopt $(TBModule) -sv_seed random -c -do "run -all; exit" +UVM_TESTNAME=router_max_payload_data_test +UVM_VERBOSITY=$(VERBOSITY)
+	vsim -vopt $(TBModule) -sv_seed random -c -do "run -all; exit" +UVM_TESTNAME=router_min_payload_data_test +UVM_VERBOSITY=$(VERBOSITY)
 
 run_tc10 :
-	vsim -vopt $(TBModule) -sv_seed random -c -do "run -all; exit" +UVM_TESTNAME=router_mid_reset_test +UVM_VERBOSITY=$(VERBOSITY)
+	vsim -vopt $(TBModule) -sv_seed random -c -do "run -all; exit" +UVM_TESTNAME=router_mid_payload_data_test +UVM_VERBOSITY=$(VERBOSITY)
 
 run_tc11 :
-	vsim -vopt $(TBModule) -sv_seed random -c -do "run -all; exit" +UVM_TESTNAME=router_soft_reset_0_test +UVM_VERBOSITY=$(VERBOSITY)
+	vsim -vopt $(TBModule) -sv_seed random -c -do "run -all; exit" +UVM_TESTNAME=router_max_payload_data_test +UVM_VERBOSITY=$(VERBOSITY)
 
 run_tc12 :
-	vsim -vopt $(TBModule) -sv_seed random -c -do "run -all; exit" +UVM_TESTNAME=router_soft_reset_1_test +UVM_VERBOSITY=$(VERBOSITY)
+	vsim -vopt $(TBModule) -sv_seed random -c -do "run -all; exit" +UVM_TESTNAME=router_mid_reset_test +UVM_VERBOSITY=$(VERBOSITY)
 
 run_tc13 :
+	vsim -vopt $(TBModule) -sv_seed random -c -do "run -all; exit" +UVM_TESTNAME=router_soft_reset_0_test +UVM_VERBOSITY=$(VERBOSITY)
+
+run_tc14 :
+	vsim -vopt $(TBModule) -sv_seed random -c -do "run -all; exit" +UVM_TESTNAME=router_soft_reset_1_test +UVM_VERBOSITY=$(VERBOSITY)
+
+run_tc15 :
 	vsim -vopt $(TBModule) -sv_seed random -c -do "run -all; exit" +UVM_TESTNAME=router_soft_reset_2_test +UVM_VERBOSITY=$(VERBOSITY)
 
 tc1 : cmp run_tc1
@@ -82,6 +88,10 @@ tc12 : cmp run_tc12
 
 tc13 : cmp run_tc13
 
+tc14 : cmp run_tc14
+
+tc15 : cmp run_tc15
+
 tc1_cov :
 	vsim -coverage -vopt $(TBModule) -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_header_addr_00_test
 
@@ -92,33 +102,39 @@ tc3_cov :
 	vsim -coverage -vopt $(TBModule) -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_header_addr_10_test
 
 tc4_cov :
-	vsim -coverage -vopt $(TBModule) -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_min_header_len_test
+	vsim -coverage -vopt $(TBModule) -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_header_addr_11_test
 
 tc5_cov :
-	vsim -coverage -vopt $(TBModule) -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_mid_header_len_test
+	vsim -coverage -vopt $(TBModule) -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_header_len_0_test
 
 tc6_cov :
-	vsim -coverage -vopt $(TBModule) -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_max_header_len_test
+	vsim -coverage -vopt $(TBModule) -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_min_header_len_test
 
 tc7_cov :
-	vsim -coverage -vopt $(TBModule) -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_min_payload_data_test
+	vsim -coverage -vopt $(TBModule) -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_mid_header_len_test
 
 tc8_cov :
-	vsim -coverage -vopt $(TBModule) -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_mid_payload_data_test
+	vsim -coverage -vopt $(TBModule) -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_max_header_len_test
 
 tc9_cov :
-	vsim -coverage -vopt $(TBModule) -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_max_payload_data_test
+	vsim -coverage -vopt $(TBModule) -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_min_payload_data_test
 
 tc10_cov :
-	vsim -coverage -vopt $(TBModule) +RESET_CLK_CNTS=10 -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_mid_reset_test
+	vsim -coverage -vopt $(TBModule) -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_mid_payload_data_test
 
 tc11_cov :
-	vsim -coverage -vopt $(TBModule) +RESET_CLK_CNTS=10 -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_soft_reset_0_test
+	vsim -coverage -vopt $(TBModule) -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_max_payload_data_test
 
 tc12_cov :
-	vsim -coverage -vopt $(TBModule) +RESET_CLK_CNTS=10 -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_soft_reset_1_test
+	vsim -coverage -vopt $(TBModule) +RESET_CLK_CNTS=10 -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_mid_reset_test
 
 tc13_cov :
+	vsim -coverage -vopt $(TBModule) +RESET_CLK_CNTS=10 -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_soft_reset_0_test
+
+tc14_cov :
+	vsim -coverage -vopt $(TBModule) +RESET_CLK_CNTS=10 -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_soft_reset_1_test
+
+tc15_cov :
 	vsim -coverage -vopt $(TBModule) +RESET_CLK_CNTS=10 -sv_seed random -c -do "coverage save -onexit .ucdb; run -all; exit" +UVM_TESTNAME=router_soft_reset_2_test
 
 merge_cov :
@@ -127,7 +143,7 @@ merge_cov :
 merge_report :
 	vcover report -details -html mergecov.ucdb 
 
-all_tc : lib cmp tc1 tc2 tc3 tc4 tc5 tc6 tc7 tc8 tc9 tc10 tc11 tc12 tc13
+all_tc : lib cmp tc1 tc2 tc3 tc4 tc5 tc6 tc7 tc8 tc9 tc10 tc11 tc12 tc13 tc14 tc15
 
 cov_regr : lib cmp tc1_cov tc2_cov tc3_cov tc4_cov tc5_cov tc6_cov merge_cov merge_report
 

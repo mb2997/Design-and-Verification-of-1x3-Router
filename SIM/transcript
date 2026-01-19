@@ -1,6 +1,6 @@
-# vsim -coverage -vopt router_top -sv_seed random -c -do "coverage save -onexit router_soft_reset_2_test_0.ucdb; run -all; exit" "+UVM_TESTNAME=router_soft_reset_2_test" "+UVM_VERBOSITY=UVM_DEBUG" "+uvm_set_action=*,_ALL_,UVM_INFO,UVM_NO_ACTION" 
-# Start time: 16:18:44 on Feb 09,2025
-# ** Note: (vsim-8009) Loading existing optimized design _opt3
+# vsim -coverage -vopt router_top -sv_seed random -c -do "coverage save -onexit router_soft_reset_2_test_4.ucdb; run -all; exit" "+UVM_TESTNAME=router_soft_reset_2_test" "+UVM_VERBOSITY=UVM_DEBUG" "+uvm_set_action=*,_ALL_,UVM_INFO,UVM_NO_ACTION" 
+# Start time: 00:26:08 on Jan 19,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim-64
 # //  Version 10.7c win64 Aug 18 2018
 # //
@@ -30,8 +30,8 @@
 # Loading work.fsm(fast)
 # Loading mtiUvm.questa_uvm_pkg(fast)
 # Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
-# Sv_Seed = 3905460894
-# coverage save -onexit router_soft_reset_2_test_0.ucdb
+# Sv_Seed = 899484034
+# coverage save -onexit router_soft_reset_2_test_4.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -127,114 +127,24 @@
 # 
 # --------------------------------- READ TRANSACTION (SOFT_RESET_2) : 2 ---------------------------------
 # 
-#               910000 -- payload_data[0] = 36
-#               920000 -- payload_data[1] = 32
-#               930000 -- payload_data[2] = 4e
-#               940000 -- payload_data[3] = ef
-#               950000 -- payload_data[4] = 5c
-#               960000 -- payload_data[5] = bf
-#               970000 -- payload_data[6] = 95
-#               980000 -- payload_data[7] = d1
-#               990000 -- payload_data[8] = 81
 # 
 # --------------------------------- WRITE TRANSACTION (H-ADDR = 2'b10) : 2 ---------------------------------
 # 
-#              1000000 -- payload_data[9] = da
-#              1010000 -- payload_data[10] = ac
-#              1020000 -- payload_data[11] = 48
-#              1030000 -- payload_data[12] = 23
-#              1040000 -- payload_data[13] = 17
-#              1050000 -- payload_data[14] = ce
-#              1060000 -- payload_data[15] = ae
-#              1070000 -- payload_data[16] = fc
-#              1080000 -- payload_data[17] = d7
-#              1090000 -- payload_data[18] = a6
-#              1100000 -- payload_data[19] = 7d
 # 
 # --------------------------------- READ TRANSACTION (SOFT_RESET_2) : 3 ---------------------------------
 # 
-#              1110000 -- payload_data[20] = 0
-#              1120000 -- payload_data[21] = 0
-#              1130000 -- payload_data[22] = 0
-#              1140000 -- payload_data[23] = 0
-#              1150000 -- payload_data[24] = 0
-#              1160000 -- payload_data[25] = 0
-#              1170000 -- payload_data[26] = 0
-# 
-# --------------------------------- WRITE TRANSACTION (H-ADDR = 2'b10) : 3 ---------------------------------
-# 
-#              1180000 -- payload_data[27] = 0
-#              1190000 -- payload_data[28] = 0
-#              1200000 -- payload_data[29] = 0
-#              1210000 -- payload_data[30] = 0
-#              1220000 -- payload_data[31] = 0
-#              1230000 -- payload_data[32] = 0
-#              1240000 -- payload_data[33] = 0
-#              1250000 -- payload_data[34] = 0
-#              1260000 -- payload_data[35] = 0
-#              1270000 -- payload_data[36] = 0
-#              1280000 -- payload_data[37] = 0
-#              1290000 -- payload_data[38] = 0
-#              1300000 -- payload_data[39] = 0
-#              1310000 -- payload_data[40] = 0
-#              1320000 -- payload_data[41] = 0
-#              1330000 -- payload_data[42] = 0
-#              1340000 -- payload_data[43] = 0
-#              1350000 -- payload_data[44] = 0
-#              1360000 -- payload_data[45] = 0
-#              1370000 -- payload_data[46] = 0
-#              1380000 -- payload_data[47] = 0
-#              1390000 -- payload_data[48] = 0
 # 
 # --------------------------------- READ TRANSACTION (SOFT_RESET_2) : 4 ---------------------------------
 # 
-#              1890000 -- payload_data[0] = 29
-#              1900000 -- payload_data[1] = 52
-#              1910000 -- payload_data[2] = 72
-#              1920000 -- payload_data[3] = b7
-#              1930000 -- payload_data[4] = c1
-#              1940000 -- payload_data[5] = 7f
-#              1950000 -- payload_data[6] = 59
-#              1960000 -- payload_data[7] = 1e
-#              1970000 -- payload_data[8] = e7
-#              1980000 -- payload_data[9] = da
-#              1990000 -- payload_data[10] = 18
-#              2000000 -- payload_data[11] = 32
-#              2010000 -- payload_data[12] = 10
-#              2020000 -- payload_data[13] = 60
-#              2030000 -- payload_data[14] = 60
-#              2040000 -- payload_data[15] = 51
-#              2050000 -- payload_data[16] = de
-#              2060000 -- payload_data[17] = 18
-#              2070000 -- payload_data[18] = bb
-#              2080000 -- payload_data[19] = a8
-#              2090000 -- payload_data[20] = c1
-#              2100000 -- payload_data[21] = e0
-#              2110000 -- payload_data[22] = ac
-#              2120000 -- payload_data[23] = cc
-#              2130000 -- payload_data[24] = df
 # 
-# --------------------------------- WRITE TRANSACTION (H-ADDR = 2'b10) : 4 ---------------------------------
+# --------------------------------- WRITE TRANSACTION (H-ADDR = 2'b10) : 3 ---------------------------------
 # 
-#              2140000 -- payload_data[25] = 25
-#              2150000 -- payload_data[26] = 2f
-#              2160000 -- payload_data[27] = e
-#              2170000 -- payload_data[28] = 86
-#              2180000 -- payload_data[29] = 98
-#              2190000 -- payload_data[30] = 15
-#              2200000 -- payload_data[31] = 99
-#              2210000 -- payload_data[32] = ea
-#              2220000 -- payload_data[33] = 48
-#              2230000 -- payload_data[34] = cc
-#              2240000 -- payload_data[35] = e2
-#              2250000 -- payload_data[36] = c4
 # 
 # --------------------------------- READ TRANSACTION (SOFT_RESET_2) : 5 ---------------------------------
 # 
-#              2260000 -- payload_data[37] = 0
-#              2270000 -- payload_data[38] = 0
-#              2280000 -- payload_data[39] = 0
-#              2290000 -- payload_data[40] = 0
+# 
+# --------------------------------- WRITE TRANSACTION (H-ADDR = 2'b10) : 4 ---------------------------------
+# 
 # 
 # --------------------------------- WRITE TRANSACTION (H-ADDR = 2'b10) : 5 ---------------------------------
 # 
@@ -248,7 +158,13 @@
 # --------------------------------- WRITE TRANSACTION (H-ADDR = 2'b10) : 7 ---------------------------------
 # 
 # 
+# --------------------------------- READ TRANSACTION (SOFT_RESET_2) : 7 ---------------------------------
+# 
+# 
 # --------------------------------- WRITE TRANSACTION (H-ADDR = 2'b10) : 8 ---------------------------------
+# 
+# 
+# --------------------------------- READ TRANSACTION (SOFT_RESET_2) : 8 ---------------------------------
 # 
 # -----------------------------------------------------------------------------------------------------------------------
 #                                                  SIMULATION SUMMARY                                                    
@@ -280,7 +196,7 @@
 # [RNTST]     1
 # [ROUTER_TOP]     1
 # ** Note: $finish    : C:/questasim64_10.7c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 3705 ns  Iteration: 60  Instance: /router_top
+#    Time: 4240 ns  Iteration: 61  Instance: /router_top
 # Saving coverage database on exit...
-# End time: 16:18:46 on Feb 09,2025, Elapsed time: 0:00:02
+# End time: 00:26:10 on Jan 19,2026, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
